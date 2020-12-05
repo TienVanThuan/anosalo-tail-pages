@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*
+Theme Name: MyNewSite
+Author: ProntoNet
+Author URI: http://www.prontonet.ne.jp/
+Version: 1.0
+*/
+
+$w: auto;
+@import "import/0_mixin";
+@import "import/0_reset";
+@import "import/0_wp-common";
+
+/* ----------------------------- The entire */
+
+body {
+    font-size: 13px;
+    line-height: 2em;
+    color: #333;
+    // font-family: Helvetica, "游ゴシック体", "YuGothic", "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ　Ｐゴシック", "MS PGothic", sans-serif;
+    background: #fff;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    &:link,
+    &:visited {
+        color: $color;
+        text-decoration: underline;
+    }
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.pc-only {
+    display: none !important;
+}
+
+img,
+.bx-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ----------------------------- 1. Common to each page */
+
+@import "import/sp/1_header";
+@import "import/sp/1_footer";
+
+/* ----------------------------- 2. top page */
+
+@import "import/sp/2_top";
+
+/* ----------------------------- 3. lower page */
+
+@import "import/sp/3_page";
+
+/* ----------------------------- 4. Post */
+
+@import "import/sp/4_side";
+
+/* ----------------------------- 9. Common parts */
+
+@import "import/sp/9_utility";
+#__bs_notify__ {
+    display: none !important;
+}
